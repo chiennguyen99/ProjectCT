@@ -5,12 +5,18 @@ public class Array {
     int[] Arr;
     int size; 
     Scanner input = new Scanner(System.in); 
-    
+    Array(){}; 
     Array(int size){
         this.size = size; 
         Arr = new int[size]; 
         for (int i = 0; i < size; i++){
             Arr[i] = 0; 
+        }
+    }
+    
+    void SetIndexArray(int value, int index){
+        if (index < size){
+            Arr[index] = value; 
         }
     }
     
@@ -28,9 +34,17 @@ public class Array {
         return Arr[i]; 
     }
     
+    void copy(Array A, int size){
+        
+        if (size == this.size){
+            System.arraycopy(this.Arr, 0, A.Arr, 0, size);
+        }
+    }
+    
     void PrintfArray(){
         for (int i = 0; i < size; i++){
             System.out.print(Arr[i] + " ");
         }
+        System.out.println("");
     }
 }

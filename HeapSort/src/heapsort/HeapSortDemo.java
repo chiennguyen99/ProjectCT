@@ -1,17 +1,37 @@
 package heapsort;
 
+import java.io.IOException;
+
 public class HeapSortDemo{
     
     public static void main(String[] args) {
-        heapsort Heap = new heapsort(5); 
+        
+        heapsort Heap = new heapsort(7); 
+        Heap.addElement(7);
         Heap.handling();
-        Heap.print();
-          
-//        Array A = new Array(5); 
-//        A.SetArray();
-//        A.SetIndex(1, 0);
-//        A.PrintfArray();
-//        System.out.println();
-//        System.out.println(A.GetIndex(0));
+        
+        for (int i = 0; i < 15; i++){
+            Heap.Arr[i].PrintfArray();
+        }  
+        
+//           
+//        int[] Arr = {0,1,2,3,4,5,6}; 
+//        int[] Arr2 = new int[7]; 
+//        
+//        System.arraycopy(Arr, 0, Arr2, 0, 7);
+//        
+//        for (int i = 0; i < 7; i++){
+//            System.out.print(Arr2[i]);
+//        }
+//        try{
+//            String s = "c"; 
+//            int n = Integer.parseInt(s); 
+//            System.out.println(n);
+//            
+//        }catch(NumberFormatException e){
+//            System.out.println(e.getMessage());
+//            System.out.println("loi");
+//        }
+//        System.out.println("chien dai ca");
     }
 }
