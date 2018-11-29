@@ -1,18 +1,38 @@
 package heapsort;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
+import javax.swing.Timer;
 
 public class HeapSortDemo{
+
     
+    static Timer t; 
     public static void main(String[] args) {
         
-        heapsort Heap = new heapsort(7); 
-        Heap.addElement(7);
-        Heap.handling();
+//        SleepTime S = new SleepTime(); 
+//        
+//        S.setValueTime(5000);
+//        
+//        System.out.println("Chien");
         
-        for (int i = 0; i < 15; i++){
-            Heap.Arr[i].PrintfArray();
-        }  
+        t = new Timer(10000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Chien dai ca");
+            }        
+        }); 
+        
+        
+        
+//        heapsort Heap = new heapsort(7); 
+//        Heap.addElement(7);
+//        Heap.handling();
+//        
+//        for (int i = 0; i < 15; i++){
+//            Heap.Arr[i].PrintfArray();
+//        }  
         
 //           
 //        int[] Arr = {0,1,2,3,4,5,6}; 
